@@ -158,7 +158,7 @@ void LiquidCrystal_CI::createChar(uint8_t location, uint8_t charmap[]) {
 
 inline size_t LiquidCrystal_CI::write(uint8_t value) {
   if (!_isInCreateChar) {
-    std::string line = _lines.at(_row);
+    String line = _lines.at(_row);
     int end = _autoscroll ? (_col - 1) : _col;
     while (line.length() <= end) {
       line += ' ';

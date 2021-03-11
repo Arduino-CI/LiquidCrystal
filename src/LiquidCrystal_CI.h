@@ -43,7 +43,7 @@ public:
   static LiquidCrystal_CI *forRsPin(uint8_t rs) {
     return (LiquidCrystal_CI *)LiquidCrystal_CI::_instances[rs];
   }
-  std::vector<std::string> getLines() { return _lines; }
+  std::vector<String> getLines() { return _lines; }
   int getRows() { return _rows; }
   bool isAutoscroll() { return _autoscroll; }
   bool isBlink() { return _blink; }
@@ -59,7 +59,7 @@ private:
   static LiquidCrystal_CI *_instances[MOCK_PINS_COUNT];
   int _col, _cols, _row, _rows, _rs_pin;
   bool _display, _cursor, _blink, _autoscroll, _isInCreateChar;
-  std::vector<std::string> _lines;
+  std::vector<String> _lines;
   byte _customChars[8][8];
   void init(uint8_t rs);
 };
